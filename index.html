@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>B2Brain Dashboard</title>
+        <link rel="icon" href="./assests/B2Brain.svg" type="image/icon type">
+        <meta name="description" content="B2Brain Dashboard">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+        <!-- Manrope Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- SIDEBAR -->
+       <aside class="sideBar b2b-white">
+            <!-- Branding -->
+            <div class="branding">
+                <div class="branding__logo">
+                    <img src="./assests/B2Brain.svg"/>
+                </div>
+                <div class="branding__name">
+                    B2Brain
+                </div>
+            </div>
+            <!--SideBar Item List  -->
+            <div class="sideBar__item__list">
+                <div class="sideBar__item">
+                    <div class="sideBar__item__logo"><i class="fa-solid fa-house"></i></div>
+                    <div class="sideBar__item__text active__item"> Dashboard</div>
+                </div>
+                <div class="sideBar__item">
+                    <div class="sideBar__item__logo"><i class="fa-regular fa-star"></i></div>
+                    <div class="sideBar__item__text"> Intels</div>
+                    <div class="notification badge">4 unread</div>
+                </div>
+                <div class="sideBar__item">
+                    <div class="sideBar__item__logo"><i class="fa-regular fa-user"></i></div>
+                    <div class="sideBar__item__text"> Leads</div>
+                    <div class="notification badge">4 unseen</div>
+                </div>
+                <div class="sideBar__item accordion ">
+                    <div class="sideBar__item__logo"><i class="fa-regular fa-building"></i></div>
+                    <div class="sideBar__item__text"> Accounts</div>
+                    <div class="accoridon__control"><i class="fa-solid fa-angle-down"></i></div>
+                </div>
+                <div class="panel transform">
+                    <div class="accordion__bar"></div>
+                   <div class="panel__item">Manage all</div>
+                   <div class="panel__item">Track new accounts</div>
+                   <div class="panel__item">Bulk import</div>
+                </div>
+                <div class="sideBar__item accordion">
+                    <div class="sideBar__item__logo"><i class="fa-solid fa-gear"></i></div>
+                    <div class="sideBar__item__text"> Prefrences</div>
+                    <div class="accoridon__control"><i class="fa-solid fa-angle-down"></i></div>
+                </div>
+                <div class="panel transform">
+                    <div class="accordion__bar"></div>
+                   <div class="panel__item">Product Focus</div>
+                   <div class="panel__item">Intel Prefrences</div>
+                   <div class="panel__item">Lead Personas</div>
+                </div>
+                <div class="sideBar__item">
+                    <div class="sideBar__item__logo"><i class="fa-solid fa-link"></i></div>
+                    <div class="sideBar__item__text"> Integrations</div>
+                </div>
+                <div class="sideBar__item">
+                    <div class="sideBar__item__logo"><i class="fa-solid fa-users"></i></div>
+                    <div class="sideBar__item__text"> Teams</div>
+                </div>
+                <div class="sideBar__item">
+                    <div class="sideBar__item__logo"><i class="fa-regular fa-comments"></i></div>
+                    <div class="sideBar__item__text"> Help / Support</div>
+                </div>
+
+            </div>
+       </aside>
+       <!-- Overlay -->
+       <div class="overlay" id="overlay"></div>
+
+       <!-- HEADER -->
+       <header class="b2b-white header">
+        <div class="search__container">
+            <div class="search__icon hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></div>
+            <div class="search__icon" id="glass"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="search__icon" id="xmark"><i class="fa-solid fa-xmark"></i></div>
+            <div class="search__input"><input type="text" placeholder="Search by account name or website" onkeyup="fetcher(this)"/></div>
+        </div>
+        <div class="profile__container">
+            <div class="profile__item">
+                <div class="notification__icon">
+                    <i class="fa-regular fa-bell"></i>
+                </div>
+                <div class="alert"><div class="inner__alert"></div></div>
+            </div>
+            <div class="profile__item">
+                <img src="./assests/profile.png" class="profile__img"/>
+            </div>
+        </div>
+       </header>
+       
+
+       <!-- Main Page Content -->
+       <main id="main1">
+        <div class="hero">
+            <img src="./assests/hero-image.svg"/>
+        </div>
+        <div class="trustedBy">
+            <img src="./assests/trustedBy.svg"/>
+        </div>
+        <div class="testimonials">
+            <div class="heading">Hear from our customers</div>
+            <!-- Card 1 Container -->
+            <div class="testimonial__conatiner1">
+                <!-- Card 1 -->
+                <div class="card">
+                    <div ><img class="card__qoutes" src="https://img.icons8.com/ios-filled/50/FFCECE/quote-left.png"/></div>
+                    <div class="card__content">
+                        <div class="card__text">
+                            Set up converstation with a hard-to-crack account, within a week of starting with B2Brain.
+                        </div>
+                        <div class="card__name">Augie Hoffman, SRD Manager</div>
+                        <div class="card__logo__container">
+                            <img class="card__logo"
+                            src="data:image/png;base64,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"/>
+                        </div>
+                    </div>
+                    <div class="card__image">
+                        <!-- <img src="./assests/spinner.gif" class="card__image"/> -->
+                        <img src="https://i.pravatar.cc/100" class="card__image"/>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 Conatiner -->
+            <div class="testimonial__conatiner2">
+                <!-- Card 2 -->
+                <div class="card">
+                    <div><img class="card__qoutes" src="https://img.icons8.com/ios-filled/50/FFCECE/quote-left.png"/></div>
+                    <div class="card__content">
+                        <div class="card__text">
+                            Salesloft got 12% higher responses with perssonalization using B2Brain intel
+                        </div>
+                        <div class="card__name">William Sturguis, Enterprise SRD</div>
+                        <div class="card__logo__container">
+                            <img class="card__logo"
+                            src="https://help.salesloft.com/servlet/rtaImage?eid=ka03n000000DBab&feoid=00N3n000004kFzV&refid=0EM3n000001541i"/>
+                        </div>
+                    </div>
+                    <div class="card__image">
+                        <img src="https://i.pravatar.cc/100" class="card__image"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </main>
+       <main id="main2">
+            <div class="main2__container">
+                <div class="similar__accounts">
+                    <div class="main2__heading">Similar Accounts</div>
+                    <div class="accounts__container">
+                    </div>
+                </div>
+                <div class="quick__actions">
+                    <div class="main2__heading">Quick Actions</div>
+                    <div class="quick__action__item">Track new account</div>
+                    <div class="quick__action__item">Bulk track account</div>
+                    <div class="quick__action__item">Manage accounts</div>
+    
+                </div>
+            </div>
+       </main>
+        
+        <script src="./index.js" async defer></script>
+    </body>
+</html>
